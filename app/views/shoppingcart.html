@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-6 panel panel-default" ng-controller="ShoppingcartCtrl">
+        <div class="panel-heading">Shoppingcart</div>
+        <ul class="list-group" ng-repeat="product in shoppingcart track by product.description">
+            <li class="list-group-item">
+                <span class="badge">{{product.price | currency:"$ "}}</span>
+                <button type="button" style="cursor: pointer;" ng-click="removeItem(product)">Remove</button>
+                {{product.description}}</li>
+        </ul>
+    </div>
+</div>

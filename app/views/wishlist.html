@@ -1,0 +1,10 @@
+
+    <div class="col-xs-6 panel panel-default" ng-controller="WishlistCtrl">
+        <div class="panel-heading">Wishlist</div>
+        <ul class="list-group" ng-repeat="product in wishlist track by product.description">
+            <li class="list-group-item">
+                <span class="badge">{{product.price | currency:"$ "}}</span>
+                <button type="button" style="cursor: pointer;" ng-click="removeItem(product)">Remove</button>
+                {{product.description}}</li>
+        </ul>
+</div>
